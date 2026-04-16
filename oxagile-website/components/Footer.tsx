@@ -6,9 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand */}
         <div>
-          <p className="font-display text-2xl text-text-primary mb-2">
-            Ox<span className="text-accent">.</span>Agile
-          </p>
+          <img src="/logo.svg" alt="OxAgile" className="h-8 w-auto mb-2" />
           <p className="text-text-muted text-sm">Engineering Quality. Automating Excellence.</p>
         </div>
 

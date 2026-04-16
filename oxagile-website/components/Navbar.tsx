@@ -36,8 +36,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="font-display text-2xl text-text-primary">
-          Ox<span className="text-accent">.</span>Agile
+        <Link href="/" className="flex items-center">
+          <img src="/logo.svg" alt="OxAgile" className="h-8 w-auto" />
         </Link>
 
         {/* Desktop links */}
