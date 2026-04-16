@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'OxAgile is a premier custom software development and QA firm — trusted by clients who demand precision, scalability, and intelligence in every release.',
   openGraph: {
-    title: 'OxAgile — Home',
+    title: 'OxAgile — Engineering Quality. Automating Excellence.',
     description:
       'Custom software development, QA automation, and AI workflow automation.',
   },
