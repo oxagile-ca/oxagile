@@ -15,11 +15,22 @@ const stats: Stat[] = [
   { label: 'Continents Served', value: 3, suffix: '' },
 ]
 
-function useCountUp(target: number, duration = 1500, active: boolean) {
+function useCountUp(target: number, active: boolean) {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
     if (!active) return
+
+    const prefersReduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (prefersReduced) {
+      setCount(target)
+      return
+    }
+
+    const duration = 1500
     let start = 0
     const step = target / (duration / 16)
     const timer = setInterval(() => {
@@ -32,16 +43,16 @@ function useCountUp(target: number, duration = 1500, active: boolean) {
       }
     }, 16)
     return () => clearInterval(timer)
-  }, [active, target, duration])
+  }, [active, target])
 
   return count
 }
 
 function StatItem({ stat, active }: { stat: Stat; active: boolean }) {
-  const count = useCountUp(stat.value, 1500, active)
+  const count = useCountUp(stat.value, active)
   return (
     <div className="text-center">
-      <p className="text-4xl font-display text-accent">
+      <p className="text-4xl font-display text-accent" aria-live="off" aria-atomic="true">
         {count}
         {stat.suffix}
       </p>

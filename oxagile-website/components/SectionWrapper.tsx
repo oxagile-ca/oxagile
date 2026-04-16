@@ -28,8 +28,8 @@ export default function SectionWrapper({ children, className = '' }: SectionWrap
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ${
-        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+      className={`motion-safe:transition-all motion-safe:duration-700 ${
+        visible ? 'opacity-100 translate-y-0' : 'motion-safe:opacity-0 motion-safe:translate-y-6'
       } ${className}`}
     >
       {children}
