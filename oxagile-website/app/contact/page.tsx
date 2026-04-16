@@ -96,10 +96,10 @@ export default function ContactPage() {
             <div>
               <p className="text-text-primary font-semibold mb-1">Email</p>
               <a
-                href="mailto:contact@oxagile.com"
+                href="mailto:info@oxagile.ca"
                 className="text-accent hover:underline"
               >
-                contact@oxagile.com
+                info@oxagile.ca
               </a>
             </div>
             <div>
