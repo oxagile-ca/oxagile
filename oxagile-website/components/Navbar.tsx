@@ -20,6 +20,14 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false)
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [])
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -48,9 +56,11 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-text-muted focus:outline-none"
+          className="md:hidden text-text-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
           <span className="block w-6 h-0.5 bg-current mb-1.5" />
           <span className="block w-6 h-0.5 bg-current mb-1.5" />
@@ -60,7 +70,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-surface border-t border-border px-6 py-4">
+        <div id="mobile-menu" className="md:hidden bg-surface border-t border-border px-6 py-4">
           <ul className="flex flex-col gap-4">
             {links.map((link) => (
               <li key={link.href}>

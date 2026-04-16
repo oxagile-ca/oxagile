@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-border text-center py-4 text-text-muted text-xs">
-        © 2024 OxAgile Inc. All rights reserved.
+        © {new Date().getFullYear()} OxAgile Inc. All rights reserved.
       </div>
     </footer>
   )
