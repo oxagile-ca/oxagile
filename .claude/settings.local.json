@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p ~/.config/superpowers/worktrees/oxagile)",
+      "Bash(git -C /c/Users/ankit/OneDrive/Documents/oxagile worktree add ~/.config/superpowers/worktrees/oxagile/feature-website -b feature/oxagile-website)",
+      "Bash(npx create-next-app@latest oxagile-website --typescript --tailwind --app --eslint --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(git *)",
+      "Bash(npm uninstall *)",
+      "Bash(gh --version)",
+      "Bash(cmd.exe /c \"gh --version\")",
+      "Bash(cmd.exe *)",
+      "Bash(env)",
+      "Bash(npx vercel *)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "claude-flow"
+  ]
+}
