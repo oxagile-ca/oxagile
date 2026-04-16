@@ -89,7 +89,7 @@ export default function ServicesPage() {
             <SectionWrapper key={svc.id}>
               <div
                 id={svc.id}
-                className="border-l-4 border-accent bg-surface rounded-r-xl px-8 py-8"
+                className="border-l-4 border-accent bg-gradient-to-r from-accent/5 to-surface rounded-r-xl px-8 py-8"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-4xl">{svc.icon}</span>
