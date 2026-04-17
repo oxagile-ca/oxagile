@@ -103,12 +103,8 @@ export default function ContactPage() {
               </a>
             </div>
             <div>
-              <p className="text-text-primary font-semibold mb-1">Phone</p>
-              <p>+1 (555) 000-0000</p>
-            </div>
-            <div>
               <p className="text-text-primary font-semibold mb-1">Location</p>
-              <p>Based in North America</p>
+              <p>Windsor, ON, Canada</p>
             </div>
           </div>
         </div>
